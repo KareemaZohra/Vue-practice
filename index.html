@@ -5,24 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue app</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
-    <div id="mydiv">
-        <div class="product-img">
-            <img :src="image">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"><h1 class="heading text-center"> <u>Product Page</u> </h1></div>
         </div>
-        <h3 class="inventory">
-            <span v-if="inventory>10">In-stock</span>
-            <span v-else-if="inventory<=10 && inventory>0">Almost stock-out</span>
-            <span v-else="inventory=0">Stock-out</span>
-        </h3>
-        <h1>{{ product }}</h1>
-        <a :href="url">
-            <p>{{ description }}</p>
-        </a>
-        
+    </div>
+    <div id="mydiv" class="container">
+        <div class="row">
+            <div class="product-img col-md-6">
+                <img :src="image">
+            </div>
+            <div class="col-md-6">
+                <h1>{{ product }}</h1>
+                <h3 class="inventory">
+                    <span v-if="inventory>10">In-stock</span>
+                    <span v-else-if="inventory<=10 && inventory>0">Almost stock-out</span>
+                    <span v-else="inventory=0">Stock-out</span>
+                </h3>
+                
+                <a :href="url">
+                    <p>{{ description }}</p>
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- import app -->

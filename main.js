@@ -5,8 +5,8 @@ const app = Vue.createApp({
             description : 'Comfortable light-weight summer socks',
             image: './assets/christmas-sock.jpg',
             url : 'https://www.facebook.com',
-            inventory: 8
-            
+            inventory: 8,
+            details : ['50% cotton','30% wool','20% polyester']
         }
     }
 })
