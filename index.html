@@ -27,10 +27,12 @@
                     <span v-else-if="inventory<=10 && inventory>0">Almost stock-out</span>
                     <span v-else="inventory=0">Stock-out</span>
                 </h3>
-                
                 <a :href="url">
                     <p>{{ description }}</p>
                 </a>
+                <ul>
+                    <li v-for="detail in details">{{detail}}</li>
+                </ul>
             </div>
         </div>
     </div>
