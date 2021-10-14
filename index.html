@@ -42,7 +42,8 @@
                 </ul>
                 
                 <div class="color-variant" v-for="variant in variants" :key="variant.id">{{variant.color}}</div>
-                <button id="add2cart" class="btn btn-primary" v-on:click="cart+=1">Add to cart</button>
+
+                <button id="add2cart" class="btn btn-primary" v-on:click="addToCart">Add to cart</button>
             </div>
         </div>
     </div>

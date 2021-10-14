@@ -14,5 +14,11 @@ const app = Vue.createApp({
             // variants is an array of objects
             cart : 0
         }
-    }
+    },
+    methods: {
+        addToCart(){
+            this.cart+=1;
+            // this points to the cart key of data section.
+        }
+    } 
 })
