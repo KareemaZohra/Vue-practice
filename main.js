@@ -10,8 +10,9 @@ const app = Vue.createApp({
             variants : [
                 {id : 001, color : 'red'},
                 {id : 002, color : 'green'}
-            ]
+            ],
             // variants is an array of objects
+            cart : 0
         }
     }
 })

@@ -10,18 +10,19 @@
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
-    <div class="menubar container">
-        <div class="cart">
-            <span>cart</span>
-            <span id="cart-count">1</span>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12"><h1 class="heading text-center"> <u>Product Page</u> </h1></div>
-        </div>
-    </div>
     <div id="mydiv" class="container">
+
+        <div class="cart">
+            <span>cart </span>
+            <span id="cart-count">({{ cart }})</span>
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><h1 class="heading text-center"> <u>Product Page</u> </h1></div>
+            </div>
+        </div>
+    
         <div class="row">
             <div class="product-img col-md-6">
                 <img :src="image">
@@ -41,7 +42,7 @@
                 </ul>
                 
                 <div class="color-variant" v-for="variant in variants" :key="variant.id">{{variant.color}}</div>
-                <button id="add2cart" class="btn btn-primary">Add to cart</button>
+                <button id="add2cart" class="btn btn-primary" v-on:click="cart+=1">Add to cart</button>
             </div>
         </div>
     </div>
