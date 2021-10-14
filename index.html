@@ -10,6 +10,12 @@
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
+    <div class="menubar container">
+        <div class="cart">
+            <span>cart</span>
+            <span id="cart-count">1</span>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12"><h1 class="heading text-center"> <u>Product Page</u> </h1></div>
@@ -35,7 +41,7 @@
                 </ul>
                 
                 <div class="color-variant" v-for="variant in variants" :key="variant.id">{{variant.color}}</div>
-                    
+                <button id="add2cart" class="btn btn-primary">Add to cart</button>
             </div>
         </div>
     </div>

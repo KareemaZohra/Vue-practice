@@ -2,11 +2,23 @@ img{
     border: 1px solid grey;
 }
 .heading{
-    padding: 5%;
+    padding: 2%;
 }
 .color-variant{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     border: 1px solid grey;
+    margin-top: 10px;
+}
+.menubar{
+    padding: 2%;
+}
+.cart{
+    float: right;
+    padding: 10px;
+    border: 1px solid grey;
+}
+#add2cart{
+    margin-top: 10px;
 }
