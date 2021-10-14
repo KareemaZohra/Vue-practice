@@ -4,3 +4,9 @@ img{
 .heading{
     padding: 5%;
 }
+.color-variant{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid grey;
+}

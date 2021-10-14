@@ -22,17 +22,20 @@
             </div>
             <div class="col-md-6">
                 <h1>{{ product }}</h1>
-                <h3 class="inventory">
+                <h4 class="inventory">
                     <span v-if="inventory>10">In-stock</span>
                     <span v-else-if="inventory<=10 && inventory>0">Almost stock-out</span>
                     <span v-else="inventory=0">Stock-out</span>
-                </h3>
+                </h4>
                 <a :href="url">
                     <p>{{ description }}</p>
                 </a>
                 <ul>
                     <li v-for="detail in details">{{detail}}</li>
                 </ul>
+                
+                <div class="color-variant" v-for="variant in variants" :key="variant.id">{{variant.color}}</div>
+                    
             </div>
         </div>
     </div>
