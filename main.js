@@ -12,7 +12,8 @@ const app = Vue.createApp({
                 {id : 002, color : 'green', image: 'assets/green-sock.jpg'}
             ],
             // variants is an array of objects
-            cart : 0
+            cart : 0,
+            inStock : false
         }
     },
     methods: {
