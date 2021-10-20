@@ -22,6 +22,9 @@ img{
     padding: 10px;
     border: 1px solid grey;
 }
+/* .cart::before{
+    content: "\e71e";
+} */
 #add2cart{
     margin-top: 10px;
 }
