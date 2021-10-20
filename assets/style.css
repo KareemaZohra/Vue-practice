@@ -17,6 +17,10 @@ img{
 .menubar{
     padding: 2%;
 }
+.product-img>img{
+    height: 300px;
+    width: 300px;
+}
 .cart{
     float: right;
     padding: 10px;
