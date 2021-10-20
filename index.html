@@ -44,7 +44,13 @@
                 <div class="color-variant" v-for="variant in variants" :key="variant.id"
                  @mouseover="updateImage(variant.image)" :style="{'background-color': variant.color}"></div>
 
-                <button id="add2cart" class="btn btn-primary" v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton : !inStock }">
+                <!-- <button id="add2cart" class="btn btn-primary" v-on:click="addToCart" :disabled="!inStock"
+                 :class="{ disabledButton : !inStock }">
+                    Add to cart
+                </button> -->
+
+                <button id="add2cart" v-on:click="addToCart" :disabled="!inStock"
+                 :class="[ inStock? 'activeBtn' : 'disabledButton' ]">
                     Add to cart
                 </button>
             </div>

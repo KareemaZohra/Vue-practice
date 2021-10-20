@@ -32,6 +32,10 @@ img{
 #add2cart{
     margin-top: 10px;
 }
+.activeBtn{
+    background-color: blue!important;
+    color: white;
+}
 .disabledButton{
     background-color: grey!important;
     cursor: not-allowed;
