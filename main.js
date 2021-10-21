@@ -14,7 +14,7 @@ const app = Vue.createApp({
             ],
             // variants is an array of objects
             cart : 0,
-            inStock : false,
+            //inStock : false,
             selectedVariant: 0
         }
     },
@@ -37,6 +37,14 @@ const app = Vue.createApp({
         },
         image() {
             return this.variants[this.selectedVariant].image
+        },
+        inStock(){
+            if(this.variants[this.selectedVariant].quantity>0){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
     }
 })
