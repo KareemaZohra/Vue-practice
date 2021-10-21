@@ -4,7 +4,7 @@ const app = Vue.createApp({
             brand : 'Nike',
             product : 'Socks',
             description : 'Comfortable light-weight summer socks',
-            image: './assets/christmas-sock.jpg',
+            //image: './assets/christmas-sock.jpg',
             url : 'https://www.facebook.com',
             inventory: 8,
             details : ['50% cotton','30% wool','20% polyester'],
@@ -14,7 +14,8 @@ const app = Vue.createApp({
             ],
             // variants is an array of objects
             cart : 0,
-            inStock : false
+            inStock : false,
+            selectedVariant: 0
         }
     },
     methods: {
@@ -24,11 +25,18 @@ const app = Vue.createApp({
         },
         updateImage(varImage){
             this.image=varImage;
+        },
+        updatevariant(index){
+            // here index is loop index; 0,1,2... etc
+            this.selectedVariant=index;
         }
     },
     computed: {
         title(){
             return this.brand+' '+this.product;
+        },
+        image() {
+            return this.variants[this.selectedVariant].image
         }
     }
 })
