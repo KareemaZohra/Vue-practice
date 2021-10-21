@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data : function() {
         return{
+            brand : 'Nike',
             product : 'Socks',
             description : 'Comfortable light-weight summer socks',
             image: './assets/christmas-sock.jpg',
@@ -8,8 +9,8 @@ const app = Vue.createApp({
             inventory: 8,
             details : ['50% cotton','30% wool','20% polyester'],
             variants : [
-                {id : 001, color : 'red', image: 'assets/christmas-sock.jpg'},
-                {id : 002, color : 'green', image: 'assets/green-sock.jpg'}
+                {id : 001, color : 'red', image: 'assets/christmas-sock.jpg', quantity : 30},
+                {id : 002, color : 'green', image: 'assets/green-sock.jpg', quantity : 0}
             ],
             // variants is an array of objects
             cart : 0,
@@ -24,5 +25,10 @@ const app = Vue.createApp({
         updateImage(varImage){
             this.image=varImage;
         }
-    } 
+    },
+    computed: {
+        title(){
+            return this.brand+' '+this.product;
+        }
+    }
 })

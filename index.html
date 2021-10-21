@@ -28,7 +28,7 @@
                 <img :src="image">
             </div>
             <div class="col-md-6">
-                <h1>{{ product }}</h1>
+                <h1>{{ title }}</h1>
                 <h4 class="inventory">
                     <span v-if="inventory>10">In-stock</span>
                     <span v-else-if="inventory<=10 && inventory>0">Almost stock-out</span>
@@ -41,8 +41,11 @@
                     <li v-for="detail in details">{{detail}}</li>
                 </ul>
                 
-                <div class="color-variant" v-for="variant in variants" :key="variant.id"
-                 @mouseover="updateImage(variant.image)" :style="{'background-color': variant.color}"></div>
+                <!-- <div class="color-variant" v-for="variant in variants" :key="variant.id"
+                 @mouseover="updateImage(variant.image)" :style="{'background-color': variant.color}"></div> -->
+
+                 <div class="color-variant" v-for="(variant,index) in variants" :key="variant.id"
+                 @mouseover="updatevariant(index)" :style="{'background-color': variant.color}"></div>
 
                 <!-- <button id="add2cart" class="btn btn-primary" v-on:click="addToCart" :disabled="!inStock"
                  :class="{ disabledButton : !inStock }">
