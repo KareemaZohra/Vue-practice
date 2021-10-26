@@ -36,6 +36,7 @@ app.component('product-display',{
             Add to cart
         </button>
     </div>
+    <review-form @review-submitted="reviewListing"></review-form>
 </div>`,
 
 data() {
