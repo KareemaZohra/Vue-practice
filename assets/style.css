@@ -31,9 +31,11 @@ img{
 } */
 #add2cart{
     margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 .activeBtn{
-    background-color: blue!important;
+    background-color: rgb(0, 195, 255)!important;
     color: white;
 }
 .disabledButton{
@@ -42,4 +44,19 @@ img{
 }
 .shipping{
     color: cadetblue;
+}
+
+/*************/
+form{
+    width: 50%;
+    background-color: rgb(226, 226, 225);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 5% 0%;
+}
+label, input, textarea{
+    width: 100%;
+}
+form .button{
+    margin-top: 20px;
 }
