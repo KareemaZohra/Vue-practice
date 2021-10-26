@@ -58,7 +58,7 @@ data() {
 },
 methods: {
     addToCart(){
-        this.cart+=1;
+        this.$emit('add-to-cart')
         // this points to the cart key of data section.
     },
     updateImage(varImage){
