@@ -48,8 +48,8 @@ data() {
         inventory: 8,
         details : ['50% cotton','30% wool','20% polyester'],
         variants : [
-            {id : 001, color : 'red', image: 'assets/christmas-sock.jpg', quantity : 30},
-            {id : 002, color : 'green', image: 'assets/green-sock.jpg', quantity : 0}
+            {id : 221, color : 'red', image: 'assets/christmas-sock.jpg', quantity : 30},
+            {id : 112, color : 'green', image: 'assets/green-sock.jpg', quantity : 0}
         ],
         // variants is an array of objects
         //inStock : false,
@@ -58,7 +58,7 @@ data() {
 },
 methods: {
     addToCart(){
-        this.$emit('add-to-cart')
+        this.$emit('add-to-cart', this.variants[this.selectedVariant].id)
         // this points to the cart key of data section.
     },
     updateImage(varImage){
