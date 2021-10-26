@@ -12,6 +12,7 @@ app.component('product-display',{
             <span v-else-if="inventory<=10 && inventory>0">Almost stock-out</span>
             <span v-else>Stock-out</span>
         </h4>
+        <p class="shipping">Shipping {{ shipping }}</p>
         <a :href="url">
             <p>{{ description }}</p>
         </a>
@@ -82,6 +83,18 @@ computed: {
         else{
             return false;
         }
+    },
+    shipping(){
+        if(this.premium){
+            return 'Free!'
+        }
+            return '$2.99'
+    }
+},
+props: {
+    premium:{
+        type: Boolean,
+        required: true
     }
 }
 
