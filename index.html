@@ -23,45 +23,15 @@
             </div>
         </div>
     
-        <div class="row">
-            <div class="product-img col-md-6">
-                <img :src="image">
-            </div>
-            <div class="col-md-6">
-                <h1>{{ title }}</h1>
-                <h4 class="inventory">
-                    <span v-if="inventory>10">In-stock</span>
-                    <span v-else-if="inventory<=10 && inventory>0">Almost stock-out</span>
-                    <span v-else>Stock-out</span>
-                </h4>
-                <a :href="url">
-                    <p>{{ description }}</p>
-                </a>
-                <ul>
-                    <li v-for="detail in details">{{detail}}</li>
-                </ul>
-                
-                <!-- <div class="color-variant" v-for="variant in variants" :key="variant.id"
-                 @mouseover="updateImage(variant.image)" :style="{'background-color': variant.color}"></div> -->
+        <product-display></product-display>
 
-                 <div class="color-variant" v-for="(variant, index) in variants" :key="variant.id"
-                 @mouseover="updatevariant(index)" :style="{'background-color': variant.color}"></div>
-
-                <!-- <button id="add2cart" class="btn btn-primary" v-on:click="addToCart" :disabled="!inStock"
-                 :class="{ disabledButton : !inStock }">
-                    Add to cart
-                </button> -->
-
-                <button id="add2cart" v-on:click="addToCart" :disabled="!inStock"
-                 :class="[ inStock? 'activeBtn' : 'disabledButton' ]">
-                    Add to cart
-                </button>
-            </div>
-        </div>
     </div>
 
     <!-- import app -->
     <script src="main.js"></script>
+
+    <!-- import Components -->
+    <script src="./components/productDisplay.js"></script>
 
     <!-- mount app -->
     <script>
