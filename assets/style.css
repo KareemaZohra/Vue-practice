@@ -59,3 +59,10 @@ label, input, textarea{
 form .button{
     margin-top: 20px;
 }
+.reviews ul{
+    list-style-type: none;
+}
+.reviews ul>li{
+    padding: 10px;
+    background-color: cadetblue;
+}

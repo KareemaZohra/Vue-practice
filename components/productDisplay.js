@@ -1,4 +1,6 @@
 app.component('product-display',{
+    //'product-display' is the component name
+
     template : 
     /*html*/
     `<div class="row">
@@ -36,6 +38,7 @@ app.component('product-display',{
             Add to cart
         </button>
     </div>
+    <reviews-list :reviews="reviews"></reviews-list>
     <review-form @review-submitted="reviewListing"></review-form>
 </div>`,
 
@@ -54,7 +57,8 @@ data() {
         ],
         // variants is an array of objects
         //inStock : false,
-        selectedVariant: 0
+        selectedVariant: 0,
+        reviews: []
     }
 },
 methods: {
@@ -68,7 +72,11 @@ methods: {
     updatevariant(index){
         // here index is loop index; 0,1,2... etc
         this.selectedVariant=index;
+    },
+    reviewListing(singleReview){
+        this.reviews.push(singleReview);
     }
+    //since reviewListing is an emitter , it shoudld emit to parent. here product-display component is the parent
 },
 computed: {
     title(){
